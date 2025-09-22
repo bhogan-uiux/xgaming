@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Example</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    cursor: none; /* hide default cursor */
+    background: #111;
+  }
+
+  .cursor, .cursor2 {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor {
+    background: red;
+    width: 10px;
+    height: 10px;
+    z-index: 99999;
+    transition: transform ease 0.1s;
+  }
+
+  .cursor2 {
+    background: blue;
+       z-index: 99998;
+    transition: transform ease 0.2s;
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="cursor2"></div>
+
+<script>
+const cursor = document.querySelector(".cursor");
+const cursor2 = document.querySelector(".cursor2");
+
+document.addEventListener("mousemove", function(e) {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+ duration = 0.1;
+
+
+  cursor2.style.left = e.clientX + "px";
+  cursor2.style.top = e.clientY + "px";
+  duration = 0.2;
+});
+</script>
+
+</body>
+</html>

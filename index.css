@@ -753,6 +753,14 @@ transform: rotate(0deg);
     position: relative;
     
 }
+.palyer_gallery_maincol h2{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'ChakraPetch';
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
         .gamer_container{
         display: flex;
         flex-direction: column;

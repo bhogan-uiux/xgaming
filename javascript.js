@@ -18,3 +18,24 @@ document.addEventListener("mousemove", function(e) {
   cursor2.style.top = e.clientY -18 + "px";
 });
 
+const area = document.querySelector(".area");
+const video =document.querySelector(".video_1");
+console.log(video);
+
+const nextbutton = document.querySelector(".playvideo");
+console.log(nextbutton);
+
+const videolist = ['hero-1.mp4','hero-2.mp4','hero-3.mp4',];
+
+let index = 0;
+nextbutton.addEventListener("click", function(){
+    index++;
+
+  video.src = videolist[index];
+
+ if (index >= 2) {
+    index = -1; 
+  }
+
+});
+

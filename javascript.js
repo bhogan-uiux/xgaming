@@ -20,18 +20,19 @@ document.addEventListener("mousemove", function(e) {
 
 const area = document.querySelector(".area");
 const video =document.querySelector(".video_1");
-console.log(video);
-
 const nextbutton = document.querySelector(".playvideo");
-console.log(nextbutton);
 
-const videolist = ['hero-1.mp4','hero-2.mp4','hero-3.mp4',];
+const videolist = [
+  './videos/hero-1.mp4','./videos/hero-2.mp4','./videos/hero-3.mp4',
+];
 
 let index = 0;
 nextbutton.addEventListener("click", function(){
     index++;
 
   video.src = videolist[index];
+  video.load();
+video.play();
 
  if (index >= 2) {
     index = -1; 
